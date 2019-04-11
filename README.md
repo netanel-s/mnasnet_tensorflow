@@ -28,6 +28,11 @@ arg_scopes_map = {
  If you want to use mnasnet in the [object detection api](https://github.com/tensorflow/models/tree/master/research/object_detection), we provide the implementation of retinanet.Copy the files in the /object_detection/models directory to where the object detection api is located, then add the model to [model_builder.py](https://github.com/tensorflow/models/blob/r1.13.0/research/object_detection/builders/model_builder.py).The configuration file is provided in the /object_detection/samples/configs/ directory
  
 ```python
+#......
+from object_detection.models.ssd_mnasnet_fpn_feature_extractor import SSDMNASNetA1FpnFeatureExtractor, SSDMNASNetB1FpnFeatureExtractor
+```
+ 
+```python
 SSD_FEATURE_EXTRACTOR_CLASS_MAP = {
     #......
     'ssd_mnasnet_a1_fpn':SSDMNASNetA1FpnFeatureExtractor,
